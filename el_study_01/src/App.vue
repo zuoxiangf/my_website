@@ -55,9 +55,33 @@ export default {
   data() {
     return {
       users: [
-          { userWorkno: 'A001', familyName: '张', name: '三', mobile: '13800000001', staffType: '正式', userCardno: '110101199001011234', registerTime: '2016-05-02 10:00:00' },
-        { userWorkno: 'A002', familyName: '李', name: '四', mobile: '13800000002', staffType: '正式', userCardno: '110101199002022345', registerTime: '2016-05-04 09:00:00' },
-        { userWorkno: 'A003', familyName: '王', name: '五', mobile: '13800000003', staffType: '外包', userCardno: '110101199003033456', registerTime: '2016-05-01 14:00:00' },
+        {
+          userWorkno: 'A001',
+          familyName: '张',
+          name: '三',
+          mobile: '13800000001',
+          staffType: '正式',
+          userCardno: '110101199001011234',
+          registerTime: '2016-05-02 10:00:00'
+        },
+        {
+          userWorkno: 'A002',
+          familyName: '李',
+          name: '四',
+          mobile: '13800000002',
+          staffType: '正式',
+          userCardno: '110101199002022345',
+          registerTime: '2016-05-04 09:00:00'
+        },
+        {
+          userWorkno: 'A003',
+          familyName: '王',
+          name: '五',
+          mobile: '13800000003',
+          staffType: '外包',
+          userCardno: '110101199003033456',
+          registerTime: '2016-05-01 14:00:00'
+        },
       ]
     }
   },
@@ -84,23 +108,23 @@ export default {
         });
         return;
       }
-    
+
       try {
         await axios.delete(`/api/user/deleteDetail/${id}`);
-        this.$message({ type: 'success', message: '删除成功' });
+        this.$message({type: 'success', message: '删除成功'});
       } catch (e) {
-        this.$message({ type: 'error', message: '删除失败，请稍后重试' });
+        this.$message({type: 'error', message: '删除失败，请稍后重试'});
         return;
       }
-    
+
       await this.getList();
     },
-    edit(row){
+    edit(row) {
       this.$refs.edit.open(row);
     },
     handleRefresh() {
       this.getList();
-      this.$message({ type: 'success', message: '刷新成功' });
+      this.$message({type: 'success', message: '刷新成功'});
     }
   },
   mounted() {
