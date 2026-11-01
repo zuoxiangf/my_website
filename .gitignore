@@ -1,0 +1,87 @@
+# ===========================
+# 通用 / 操作系统 / 编辑器
+# ===========================
+# 操作系统垃圾文件
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code（如果团队使用）
+.vscode/
+# 如果有些 VS Code 配置希望共享，可以只忽略个人设置：
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/extensions.json
+
+# ===========================
+# 前端（React / Vue）
+# ===========================
+# 依赖
+**/node_modules/
+
+# 构建产物
+**/dist/
+**/build/
+**/.next/
+**/.nuxt/
+**/out/
+
+# 测试与覆盖率
+**/coverage/
+**/.nyc_output/
+
+# 缓存与临时文件
+**/.eslintcache
+**/*.tsbuildinfo
+**/.vite/
+
+# 环境变量（仅忽略本地，示例文件应提交）
+**/.env
+**/.env.local
+**/.env.*.local
+
+# ===========================
+# 后端（Java / Spring Boot / Maven）
+# ===========================
+# 编译产物与构建目录
+**/target/
+**/*.class
+
+# Maven Wrapper（jar 通常需要提交，确保新环境能直接构建）
+!**/.mvn/wrapper/maven-wrapper.jar
+**/.mvn/timing.properties
+
+# Spring Boot / STS 相关
+**/.sts4-cache/
+**/.springBeans
+
+# 日志与临时文件
+**/logs/
+**/*.log
+**/*.pid
+
+# 敏感配置文件（本地覆盖）
+**/application-local.properties
+**/application-local.yml
+**/application-dev.properties
+# 根据团队约定，如果敏感信息不放在主配置中，也可以忽略特定的 profile 文件
+
+# ===========================
+# 环境变量与机密（通用）
+# ===========================
+# 永远不要提交真实的 .env 文件
+.env
+.env.*
+!.env.sample
+!.env.example
+
+# ===========================
+# 通用杂项
+# ===========================
+*.orig
+*.rej
